@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Users</title>
+		<link type="text/css" rel="stylesheet" href="styles/Users.css" />
+	</head>
+	<body>
+		<div id="content">
+			<fieldset id="usersFieldSet">
+				<legend>Users</legend>
+				<table id="tblUsers">
+					<tr>
+						<th>Actions</th>
+						<th>Upload&Download</th>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Phone</th>
+						<th>Website</th>
+					</tr>
+				</table>
+				<a id="btnAdd" href="#">Add</a>				
+			</fieldset>
+		</div>
+		<div id="overlay">
+		</div>
+		<div id="popup">
+			<fieldset>
+				<legend id="legendPopup">Add User</legend>
+				<input id="hdnUserId" type="hidden" value="" />
+				<div>
+					<label for="txtUserName">User Name: </label>
+					<input id="txtUserName" type="text" value="" placeholder="User Name" />
+				</div>
+				<div>
+					<label for="txtEmail">Email Id: </label>
+					<input id="txtEmail" type="email" value="" placeholder="Email Id" />
+				</div>
+				<div>
+					<label for="txtPhone">Phone Number: </label>
+					<input id="txtPhone" type="phone" value="" placeholder="Phone number" />
+				</div>
+				<div>
+					<label for="txtWebsite">Website: </label>
+					<input id="txtWebsite" type="text" value="" placeholder="Website" />
+				</div>
+				<div>
+					<input id="btnCancel" type="button" value="Cancel"/>
+					<input id="btnSave" type="button" value="Save"/>
+				</div>												
+			</fieldset>
+		</div>	
+		<div id="uploadFilePopup">
+			<fieldset>
+				<legend>Upload File</legend>
+				<input id="hdnUserIdForUpload" name="userid" type="hidden" value="" />
+				<div>
+					<label for="inputFile">User Image: </label>
+					<input id="inputFile" type="file" value="" name="userpic" placeholder="File to be uploaded" />
+				</div>
+
+				<div>
+					<label for="progressUpload">Progress: </label>
+					<progress id="progressUpload" value="0" max="100" />
+				</div>
+				
+				<div>
+					<input id="btnCancelFile" type="button" value="Cancel"/>
+					<input id="btnUploadFile" type="button" value="Save"/>
+				</div>												
+			</fieldset>
+		</div>			
+		 <script type="text/javascript" src="lib/jQuery.js"></script>
+		 <script type="text/javascript" src="js/Users.js"></script>
+	</body>
+</html>

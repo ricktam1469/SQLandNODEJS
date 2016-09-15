@@ -1,0 +1,80 @@
+group by restriction
+1>either only colms, or anly aggregate
+2>all colms in group by only comes with select parameters.Only aggregate can come any numbers
+
+where have to come before groupby, hence we use having clause...
+
+order-->
+select
+from
+where
+groupby
+having
+order by
+
+
+Insert into t1(Name,id)
+select name, color
+from t2
+
+
+Trunctate table t1
+In truncate id get reset.
+In delete id doesnt get reset
+
+IS NULL and ISNULL difference
+
+mysql> alter table t1
+    -> add constraint age default(0) for eid;
+--------------------------------------------------------------------------------------------------------
+Class2
+
+Inner Join-It is exclusive(not giving row where it dont matches
+select * from t1 join(by default inner) t2
+on t1.id=t2.id;
+
+Left Join- left join table will definitely come, it will null if not available(first run inner join then do next)
+Right Join-right join will come for sure
+Full Join
+Cross Join-cartisian product
+
+diff bw FJ and CJ
+
+t1,t2 where t1.id=t2.t1.id-----from t1 join t2 on t1.id=t2.t1.id
+*= for left join
+=* for right join
+
+
+	
+What will be the opposite of inner join?
+An OUTER join, which can be of three options:
+
+LEFT
+RIGHT
+FULL
+
+
+Using LEFT JOIN/IS NULL
+
+   SELECT p.*
+     FROM PERSON p
+LEFT JOIN ADDRESS a ON a.addrid = p.addrid
+    WHERE a.addrid IS NULL
+Using NOT EXISTS
+
+SELECT p.*
+  FROM PERSON p
+ WHERE NOT EXISTS(SELECT NULL
+                    FROM ADDRESS a
+                   WHERE a.addrid = p.addrid)
+Using NOT IN
+
+SELECT p.*
+  FROM PERSON p
+ WHERE p.addrid NOT IN (SELECT a.addrid
+                          FROM ADDRESS a)
+
+In union null = null
+distinct by default
+
+IN is used for multiple records
